@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveLeak.com - The home of shocking videos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.4;
+            font-size: 13px;
+        }
+
+        #header {
+            background: #fff;
+            border-bottom: 3px solid #c00;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            width: 980px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+
+        .logo-number {
+            color: #c00;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .red-stripes {
+            background: #c00;
+            height: 5px;
+            width: 100%;
+        }
+
+        #navigation {
+            background: #f0f0f0;
+            border-bottom: 1px solid #ddd;
+            padding: 8px 0;
+        }
+        
+        .nav-container {
+            width: 980px;
+            margin: 0 auto;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-item {
+            color: #333;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+        
+        .nav-item:hover {
+            color: #c00;
+        }
+
+        .main-button {
+            width: 980px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        
+        .tg-btn {
+            display: inline-block;
+            background: linear-gradient(to bottom, #ff3333 0%, #cc0000 50%, #990000 100%);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 15px 40px;
+            border: 1px solid #800000;
+            border-radius: 5px;
+            text-shadow: 1px 1px 1px #000;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.3), 
+                        0 4px 8px rgba(0,0,0,0.2),
+                        inset 0 1px 0 rgba(255,255,255,0.4);
+            transition: all 0.2s;
+        }
+        
+        .tg-btn:hover {
+            background: linear-gradient(to bottom, #ff4444 0%, #dd0000 50%, #aa0000 100%);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4), 
+                        0 6px 12px rgba(0,0,0,0.3),
+                        inset 0 1px 0 rgba(255,255,255,0.5);
+            transform: translateY(-2px);
+        }
+
+        #content {
+            width: 980px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            margin-top: 10px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .section-title {
+            color: #c00;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #c00;
+        }
+
+        .leaderboard {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+        }
+        
+        .leader-item {
+            padding: 10px;
+            margin: 8px 0;
+            background: #fff;
+            border-left: 4px solid #c00;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .leader-position {
+            color: #c00;
+            font-weight: bold;
+            font-size: 16px;
+            width: 40px;
+            text-align: center;
+        }
+        
+        .leader-name {
+            color: #333;
+            flex-grow: 1;
+            font-weight: bold;
+        }
+
+        .memes-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .meme-item {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 8px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        
+        .meme-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+        
+        .meme-item img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #eee;
+            border-radius: 3px;
+        }
+        
+        .meme-title {
+            font-size: 12px;
+            color: #666;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        #footer {
+            width: 980px;
+            margin: 30px auto;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="red-stripes"></div>
+
+    <div id="header">
+        <div class="header-container">
+            <div class="logo" style="display: flex; align-items: center;">
+                <!-- ТВОЙ ЛОГОТИП -->
+                <img src="logo.png" alt="LiveLeak">
+                <span class="logo-number">1324</span>
+            </div>
+            <div style="color: #666; font-size: 14px; font-style: italic;">
+                The home of shocking videos
+            </div>
+        </div>
+    </div>
+
+    <div id="navigation">
+        <div class="nav-container">
+            <a href="#" class="nav-item">roblix</a>
+            <a href="#" class="nav-item">minecrift</a>
+            <a href="#" class="nav-item">standuff</a>
+            <a href="#" class="nav-item">fartnite</a>
+            <a href="#" class="nav-item">brawle stars</a>
+        </div>
+    </div>
+
+    <div class="main-button">
+        <a href="https://t.me/+koZBF6hf6-9hYzZi" class="tg-btn" target="_blank">
+            [ ВХОД В ТЕЛЕГРАМ КАНАЛ ]
+        </a>
+    </div>
+
+    <div id="content">
+        <div class="section">
+            <div class="section-title"> ШЛЮXИ НЕДЕЛИ - ТОП 5</div>
+            <div class="leaderboard">
+                <div class="leader-item">
+                    <div class="leader-position">1</div>
+                    <div class="leader-name">1 место - 0 голосов</div>
+                </div>
+                <div class="leader-item">
+                    <div class="leader-position">2</div>
+                    <div class="leader-name">2 место - 0 голосов</div>
+                </div>
+                <div class="leader-item">
+                    <div class="leader-position">3</div>
+                    <div class="leader-name">3 место - 0 голосов</div>
+                </div>
+                <div class="leader-item">
+                    <div class="leader-position">4</div>
+                    <div class="leader-name">4 место - 0 голосов</div>
+                </div>
+                <div class="leader-item">
+                    <div class="leader-position">5</div>
+                    <div class="leader-name">5 место - 0 голосов</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">ха ха МЕМАСИКИ #СМЕХ</div>
+            <div class="memes-grid">
+                <div class="meme-item">
+                    <img src="memes/meme1.jpg" alt="Мем 1">
+                    <div class="meme-title">стандоф 2</div>
+                </div>
+                <div class="meme-item">
+                    <img src="memes/meme2.jpg" alt="Мем 2">
+                    <div class="meme-title">обоi клещ рояль</div>
+                </div>
+                <div class="meme-item">
+                    <img src="memes/meme3.jpg" alt="Мем 3">
+                    <div class="meme-title">Фортнiте</div>
+                </div>
+                <div class="meme-item">
+                    <img src="memes/meme4.jpg" alt="Мем 4">
+                    <div class="meme-title">браiнраты</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        © 2025 LiveLeak 1324 Style Project | ble bla blu
+    </div>
+</body>
+</html>
